@@ -31,16 +31,15 @@ h6 {
 ul {
    margin: 0;
    padding: 0;
+   list-style: none;
 }
 img {
    display: block;
    max-width: 100%;
-   height: auto;
+   /* height: auto; */
 }
-.list {
-   list-style: none;
-}
-.link {
+
+a {
    text-decoration: none;
 }
 
@@ -80,21 +79,23 @@ h3 {
 } */
 
 .container {
-   width: 1440px;
-   padding-left: 248px;
-   padding-right: 248px;
+   width: 960px;
    margin: 0 auto;
+   padding-left: 8px;
+   padding-right: 8px;
 }
 .container-header {
    display: flex;
    align-items: center;
-   padding-left: 18px;
+   padding-left: 16px;
    padding-right: 16px;
 }
 
 .container-footer {
    display: flex;
    justify-content: space-between;
+   padding-left: 16px;
+   padding-right: 16px;
 }
 
 .section {
@@ -102,12 +103,13 @@ h3 {
 }
 .logo-link {
    margin-right: auto;
+   padding-top: 16px;
+   padding-bottom: 16px;
    display: flex;
    align-items: center;
+   gap: 8px;
 }
-.logo-img {
-   margin-right: 8px;
-}
+
 .logo-text {
    color: var(--accent-color);
    font-weight: 700;
@@ -117,11 +119,9 @@ h3 {
 .nav-list {
    display: flex;
    align-items: center;
-   margin-right: -40px;
+   gap: 40px;
 }
-.nav-list-item {
-   margin-right: 40px;
-}
+
 .nav-link {
    padding-top: 24px;
    padding-bottom: 24px;
@@ -145,21 +145,18 @@ h3 {
 .hero-title {
    margin-bottom: 8px;
 }
-.available-title {
-   margin-bottom: 40px;
-}
+
 .available-list {
    display: flex;
-   margin-right: -40px;
+   gap: 40px;
+   margin-top: 40px;
 }
 .available-card {
-   border-radius: 16px 16px 0px 0px;
-   margin-right: 40px;
-   flex-basis: calc(100% / 3 - 40px);
+   overflow: hidden;
+   border-radius: 16px;
 }
 .available-card:hover {
    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
-   border-radius: 16px;
 }
 .available-card-link {
    color: var(--main-text-color);
@@ -170,22 +167,20 @@ h3 {
 .available-card-title {
    margin-bottom: 8px;
 }
-.hosted-title {
-   margin-bottom: 8px;
-}
+
 .hosted-text {
+   margin-top: 8px;
    margin-bottom: 40px;
 }
 .hosted-list {
    display: flex;
    flex-wrap: wrap;
-   margin-bottom: -16px;
+   gap: 16px;
 }
 .hosted-card {
+   overflow: hidden;
    border-radius: 16px;
-   margin-right: 16px;
-   margin-bottom: 16px;
-   flex-basis: calc(100% / 6 - 16px);
+   flex-basis: calc((100% - 5 * 16px) / 6);
 }
 .hosted-card:hover {
    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.25));
@@ -194,6 +189,12 @@ h3 {
    padding: 48px 0;
    background-color: var(--secondary-background-color);
    color: var(--primary-background-color);
+}
+.footer-left {
+   display: flex;
+   gap: 8px;
+   flex-direction: column;
+   justify-content: start;
 }
 
 .logo-link-footer {
